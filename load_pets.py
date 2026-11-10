@@ -68,6 +68,6 @@ def main():
     conn.commit()
     conn.close()
     
-       print("Running load_pets.py")
+    print("Running load_pets.py")
 if __name__ == "__main__":
     main()
