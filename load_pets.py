@@ -5,12 +5,12 @@ def main():
     conn = sqlite3.connect('pets.db')
     cursor = conn.cursor()
 
-    ## DROP old tables so we can run this script multiple times without crashing
+    ## drops old tables so we can run this script multiple times without crashing
     cursor.execute("DROP TABLE IF EXISTS person")
     cursor.execute("DROP TABLE IF EXISTS pet")
     cursor.execute("DROP TABLE IF EXISTS person_pet")
 
-    ## CREATE the tables using basic execute commands
+    ## creates the tables using basic execute commands
     cursor.execute("""
         CREATE TABLE person (
             id INTEGER PRIMARY KEY,
@@ -37,7 +37,7 @@ def main():
         )
     """)
 
-    ## INSERT the data using simple, standard for loops
+    ## inserts the data using simple, standard for loops
     persons = [
         (1, 'James', 'Smith', 41),
         (2, 'Diana', 'Greene', 23),
